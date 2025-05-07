@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-fir: #003366;
+  --bg-color-sec: #000000;
+}
+
+body {
+  /* ... your existing styles ... */
+  background-image: radial-gradient(var(--bg-color-fir), var(--bg-color-sec));
+  background-size: cover; /* Or 100% 100%, or cover with background-position */
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  /* height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+header nav {
+  width: 100vw;
+  height: 6vh;
+  background: hsla(210, 0%, 0%, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header nav p {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+main {
+  text-align: center;
+  color: white;
+  /* height: 80vh; */
+}
+
+/*
+------------------------------
+  The main content starts here
+------------------------------
+*/
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePic > img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.texts {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-family: poppins;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #2bffff, #00ffab, #8f00ff, #2bffff);
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated-gradient 10s linear infinite;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.4em;
+}
+
+.texts > p {
+  font-size: 1.2em;
+}
+
+.company-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(to top, #0015FF, #848EFF);
+  color: transparent;
+  background-clip: text;
+}
+
+@keyframes animated-gradient {
+  to {
+    background-position: 300% center;
+  }
+}
+
+.changing-text {
+  letter-spacing: 2px;
+  font-family: 'Smooch Sans';
+  font-size: 1.4em;
+}
+
+/*
+------------------------------
+       Skills Showcase
+------------------------------
+*/
+
+.skills {
+  height: 100vh;
+  margin-top: 10px;
+}
+
+.skills h1 {
+  font-size: 2em;
+}
+
+.skills h1 span {
+  background: linear-gradient(#ADB3FD, #CFD2F1);
+  color: transparent;
+  background-clip: text;
+}
+
+.skill-stack {
+  margin-top: 30px;
+}
+
+.skill {
+  background: #032461;
+  width: 50vw;
+  border-radius: 20px;
+  color: #fff;
+  padding: 20px;
+  margin: 5px;
+  font-size: 1.5em;
+}
+
+.parent-skill {
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parent-skill i {
+  font-size: 2rem !important;
+}
+
+.parent-skill img {
+  width: 25%;
+  height: 25%;
+}
+
+.parent-skill:nth-child(odd) {
+  float: right;
+  background: linear-gradient(to left, #003366, hsla(210, 0%, 17%, 1));
+  padding-left: 15vw;
+  flex-direction: row;
+}
+
+.parent-skill:nth-child(even) {
+  float: left;
+  background: linear-gradient(to right, #003366, hsla(210, 0%, 17%, 1));
+  padding-right: 15vw;
+  flex-direction: row-reverse;
+}
+
+/*
+------------------------------
+           Projects
+------------------------------
+*/
+
+.project-stack {
+  height: 100vh;
+}
+
+.project-stack h1 {
+  font-size: 1.9rem;
+  margin: 0 5px;
+}
+
+.project-stack .projects {
+  background: #003366;
+  width: 90%;
+  height: 70%;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.project-stack .project {
+  color: #fff;
+  padding: 10px;
+}
+
+.project-stack .project a {
+  color: inherit;
+  font-size: 1.3rem;
+}
+
+.project-stack .project a::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 25%;
+  background: white;
+  top: 0px;
+  right: 2px;
+}
+
+.project-stack .project p {
+  font-size: 1.3em;
+}
+
+.project-stack .project {
+  border-bottom: 2px solid white;
+}
+
+.project-stack h3 {
+  font-size: 1.5rem;
+  margin: 150px auto;
+}
+
+/*
+------------------------------
+           Contacts
+------------------------------
+*/
+
+.contact-stack {
+  height: 100vh;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-stack h1 {
+  padding: 2px;
+}
+
+.contacts {
+  background: #003366;
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  height: 50%;
+}
+
+.contact {
+  margin: 20px;
+}
+
+.contacts img {
+  width: 7%;
+}
+
+.contact-path a {
+  color: #fff;
+}
+
+.contact-stack div[data-aos-delay="250"] {
+  margin-top: 60px;
+  font-size: 1.2em;
+}
+
+/*
+------------------------------
+           Footer
+------------------------------
+*/
+
+footer {
+  background: #ffc;
+  border-top: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+.project-stack {
+  font-family: 'Oswald', sans-serif;
+}
+
+section h1 {
+  /* optional: tweak weight or letter-spacing for headlines */
+  font-family: 'Oswald';
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skills .skill {
+  font-family: 'Jersery 15';
+}
+
+.project-stack p,
+.project-stack a {
+  font-family: 'Poppins', sans-serif; /* clean body text */
+}
