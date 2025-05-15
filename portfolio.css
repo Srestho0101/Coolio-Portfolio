@@ -68,7 +68,7 @@ main {
   justify-content: center;
 }
 
-.profilePic>img {
+.profilePic > img {
   width: 200px;
   height: auto;
   border-radius: 50%;
@@ -319,4 +319,11 @@ section h1 {
 .project-stack a {
   font-family: 'Poppins', sans-serif;
   /* clean body text */
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 600px) {
+  .main-content .main-div {display: flex;}
+  .profilePic > img {width: 300px;}
 }
