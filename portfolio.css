@@ -12,8 +12,9 @@
 body {
   /* ... your existing styles ... */
   background-image: radial-gradient(var(--bg-color-fir), var(--bg-color-sec));
-  background-size: cover; /* Or 100% 100%, or cover with background-position */
-  background-repeat: no-repeat; 
+  background-size: cover;
+  /* Or 100% 100%, or cover with background-position */
+  background-repeat: no-repeat;
   background-attachment: fixed;
   /* height: 100vh;
   display: flex;
@@ -21,10 +22,16 @@ body {
   align-items: center; */
 }
 
-header nav {
+header {
   width: 100vw;
   height: 6vh;
   background: hsla(210, 0%, 0%, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +40,12 @@ header nav {
   left: 0;
 }
 
-header nav p {
-  color: #fff;
-  font-size: 1.5em;
+header nav .company-logo img {
+  height: 5vh;
+}
+
+header nav ul {
+  display: flex;
 }
 
 main {
@@ -58,7 +68,7 @@ main {
   justify-content: center;
 }
 
-.profilePic > img {
+.profilePic>img {
   width: 200px;
   height: auto;
   border-radius: 50%;
@@ -83,7 +93,7 @@ main {
   font-size: 1.4em;
 }
 
-.texts > p {
+.texts>p {
   font-size: 1.2em;
 }
 
@@ -202,7 +212,7 @@ main {
 }
 
 .project-stack .project a {
-  color: green;
+  color: inherit;
   font-size: 1.3rem;
 }
 
@@ -226,7 +236,7 @@ main {
 
 .project-stack h3 {
   font-size: 1.5rem;
-  margin: 150px auto;
+  margin: 100px auto;
 }
 
 /*
@@ -307,5 +317,6 @@ section h1 {
 
 .project-stack p,
 .project-stack a {
-  font-family: 'Poppins', sans-serif; /* clean body text */
+  font-family: 'Poppins', sans-serif;
+  /* clean body text */
 }

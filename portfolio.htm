@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coolio Portfolio</title>
+  <!-- Poppins, Oswald, Jersey 15, Smooch Sans -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Oswald:wght@200..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- Font awesome kit, top secret -->
+  <script src="https://kit.fontawesome.com/77f6773f8b.js" crossorigin="anonymous"></script>
+  
+  <!-- For scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="company-logo-favicon.png">
+  
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+  
+  <!--
+  <header>
+    <nav>
+      <div class="company-logo">
+        <img src="logos/company-logo.png" alt="Company Logo">
+      </div>
+      <ul>
+        <li><a href="#main-content">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project-stack">Projects</a></li>
+        <li><a href="#contact-stack">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  -->
+  
+  <main>
+    <section class="main-content" id="main-content">
+      <div>
+        <div data-aos="fade-up" data-aos-duration="800" class="profilePic-container">
+          <div class="profilePic">
+            <img src="profilePic.jpeg" alt="Tanjiro Profile Picture">
+          </div>
+        </div>
+        
+        <div class="texts">
+          <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><span class="gradient-text">Srestho</span></h2>
+          <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">CEO of <span class="company-name">Stark 98 HQ</span></p>
+          <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+            <p>A</p>
+            <div class="changing-text">
+              <p id="typewriter-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="skills" id="skills">
+      <h1>Things I Can <span>Deal</span> With</h1>
+      <div class="skill-stack">
+        
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="parent-skill">
+          <i class="fa-brands fa-html5 fa-4x" style="color: rgba(252,72,11,255);"></i>
+          <div class="skill">HTML5</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="parent-skill">
+          <i class="fa-brands fa-css3 fa-4x" style="color: rgba(33,150,243,255);"></i>
+          <div class="skill">CSS3</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="parent-skill">
+          <i class="fa-brands fa-js fa-4x" style="color: rgba(255,223,0,255);"></i>
+          <div class="skill">JavaScript</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="parent-skill">
+          <img src="tailwind-css.png" alt="Tailwind CSS logo">
+          <div class="skill">Tailwind CSS</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="parent-skill">
+          <i class="fa-brands fa-python fa-4x" style="color: rgba(50,108,155,255);"></i>
+          <div class="skill">Python</div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <section class="project-stack" id="project-stack">
+      <h1>Here are some project from me</h1>
+      <div class="projects">
+        <div class="project" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          <a href="https://srestho0101.github.io/Evil-Calculator/" style="color: red;">Evil Calculator</a>
+          <p>A calculator with a demonic heart 💜😈</p>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          <a href="https://srestho0101.github.io/Tongue-Twisters/">Tongue Twisters</a>
+          <p>A Bangla site to twist your tongues 🌀</p>
+        </div>
+        <!--
+        <div class="project">
+          <a href=""></a>
+        </div>
+        -->
+        <h3 data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          New projects coming soon...
+        </h3>
+      </div>
+    </section>
+    
+    <section class="contact-stack" id="contact-stack">
+      <h1>Knock Me Through ThisPaths</h1>
+      
+      <div class="contact contacts">
+        <div data-aos="fade-up" class="phone-number">
+          <i class="fa-solid fa-phone"></i>
+          <span>Phone number: </span>
+          <span class="number contact-path"><a href="tel:01711222950">01711-222950</a></span>
+          <button onclick="copyPhoneNumber()"></button>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="contact email">
+          <i class="fa-regular fa-envelope" style="color: rgba(54,163,254,255);"></i>
+          <span class="email contact-path"><a href="mailto:srestho1298@gmail.com" style="color: rgba(54,163,254,255);">srestho1298@gmail.com</a></span>
+        </div>
+        <div class="contact whatsapp" data-aos="fade-up" data-aos-delay="150">
+          <i class="fa-brands fa-whatsapp" style="color: rgba(60,233,91,255);"></i>
+          <span class="contact-path"><a href="https://wa.me/8801711222950?text=Hello%20Srestho!%20I%20found%20you%20from%20your%20portfolio." target="_blank" style="color: rgba(60,233,91,255);">Chat on WhatsApp</a></span>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="250">
+          <p>Just gimme a knock and I'm here!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Built with heart and code on Android</p>
+    <p>© 2025 <span class="company-name">Stark 98 HQ</span></p>
+    <p>All rights reserved.</p>
+  </footer>
+  
+  <script src="portfolio.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var options = {
+      strings: ["Web Developer", "Game Developer", "Designer", "Businessman", "Student in class 10"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1500,
+      startDelay: 1000,
+      loop: true
+    };
+    
+    var typed = new Typed("#typewriter-text", options);
+  </script>
+  
+  <!-- For scroll animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
