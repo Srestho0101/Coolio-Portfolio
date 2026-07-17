@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muntah Mahfuz Srestho — AI &amp; Machine Learning Developer</title>
+<meta name="description" content="Muntah Mahfuz Srestho — AI &amp; Machine Learning Developer specializing in computer vision, NLP, RAG systems, and intelligent agent architectures.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <span class="brand-dot"></span>
+      <span>srestho</span><span class="brand-dim">.online</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work"><span class="nav-num">01</span>work</a></li>
+      <li><a href="#stack"><span class="nav-num">02</span>stack</a></li>
+      <li><a href="#about"><span class="nav-num">03</span>about</a></li>
+      <li><a href="#contact" class="nav-cta">contact_me()</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dots"><span></span><span></span><span></span></div>
+        <span class="terminal-title">whoami.sh — srestho@arch</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="term-line"><span class="prompt">srestho@arch</span><span class="path">:~$</span> <span class="typed" id="typedCmd"></span><span class="cursor" id="cursor">▌</span></div>
+        <div class="term-output" id="termOutput"></div>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="hero-eyebrow"><span class="led led-live"></span> available for internship</p>
+      <h1 class="hero-title">Muntah Mahfuz<br><span class="accent">Srestho</span></h1>
+      <p class="hero-role">AI &amp; Machine Learning Developer</p>
+      <p class="hero-desc">Building end-to-end ML pipelines — from cloud-based RAG ecosystems to quantized edge-computing systems that run in real time on constrained hardware.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View projects</a>
+        <a href="mailto:srestho1298@gmail.com" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/Srestho0101" target="_blank" rel="noopener">GitHub ↗</a>
+        <span class="dot-sep">·</span>
+        <a href="https://www.linkedin.com/in/Moon_Knight1298" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <span class="dot-sep">·</span>
+        <span>Dhaka, Bangladesh</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-fade" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<!-- ============ WORK ============ -->
+<section class="section" id="work">
+  <div class="section-inner">
+    <p class="section-eyebrow">01 — selected work</p>
+    <h2 class="section-title">Projects in production &amp; in progress</h2>
+
+    <div class="projects">
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status status-done"><span class="led led-done"></span>COMPLETED</span>
+          <div class="project-links">
+            <a href="https://github.com/Srestho0101/bd-guide-RAG-AI" target="_blank" rel="noopener" aria-label="View repository">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Cross-Lingual RAG API for BD Districts</h3>
+        <p class="project-desc">A production-grade retrieval-augmented generation backend that lets English queries accurately retrieve native Bengali context from a dense upazila database.</p>
+        <ul class="project-points">
+          <li>Architected with FastAPI + ChromaDB over a dense SQLite database of Bengali upazila information, holding a ~4.0s average response time.</li>
+          <li>Cross-lingual semantic matching via Mistral embeddings — English queries resolve directly to native Bengali passages.</li>
+          <li>Resolved cloud deployment bottlenecks on Render, including SQLite version constraints and local network routing, for a stable REST API.</li>
+        </ul>
+        <div class="project-tags">
+          <span>FastAPI</span><span>ChromaDB</span><span>Mistral AI</span><span>SQLite</span><span>Render</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status status-active"><span class="led led-live"></span>ACTIVE</span>
+          <div class="project-links">
+            <a href="https://github.com/Srestho0101/AI-computer-use" target="_blank" rel="noopener" aria-label="View repository">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Autonomous Cloud Vision Desktop Agent</h3>
+        <p class="project-desc">A multimodal AI desktop agent built for low-spec hardware — cognition offloaded to the cloud, perception and control kept local and lightweight.</p>
+        <ul class="project-points">
+          <li>Runs smoothly within 4GB RAM by offloading cognitive processing to the Mistral cloud API.</li>
+          <li>Zero-disk perception pipeline using lossless RAM frame captures and kernel-level scancode injection for Wayland navigation — execution loops down to 1–3 seconds.</li>
+          <li>Algorithmic API rate throttling and sandboxed Linux user execution to preserve system security and stay within free-tier limits.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Python</span><span>Mistral AI</span><span>Wayland</span><span>Arch Linux</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status status-active"><span class="led led-live"></span>ACTIVE</span>
+          <div class="project-links">
+            <a href="https://github.com/Srestho0101/monster-vision" target="_blank" rel="noopener" aria-label="View repository">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Real-Time Object Detection Drone</h3>
+        <p class="project-desc">An end-to-end edge-computing pipeline that streams live drone video to an Arch Linux server for real-time, on-the-fly inference.</p>
+        <ul class="project-points">
+          <li>Real-time inference using a dynamically quantized YOLOv8n model over live streamed video.</li>
+          <li>Fine-tuned the YOLO architecture on a custom dataset, optimizing inference speed and detection accuracy for dynamic drone environments.</li>
+        </ul>
+        <div class="project-tags">
+          <span>YOLOv8n</span><span>Computer Vision</span><span>Edge Computing</span><span>Arch Linux</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section class="section section-alt" id="stack">
+  <div class="section-inner">
+    <p class="section-eyebrow">02 — technical stack</p>
+    <h2 class="section-title">Tools of the trade</h2>
+
+    <div class="stack-grid">
+      <div class="stack-group">
+        <h3 class="stack-label">Languages &amp; Frameworks</h3>
+        <div class="stack-items">
+          <span class="chip">Python</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">FastAPI</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-label">Data Science &amp; AI</h3>
+        <div class="stack-items">
+          <span class="chip">ChromaDB</span>
+          <span class="chip">Mistral AI</span>
+          <span class="chip">HuggingFace</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Pandas</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-label">Tools &amp; Deployment</h3>
+        <div class="stack-items">
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Render</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">Arch Linux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <p class="section-eyebrow">03 — about</p>
+    <h2 class="section-title">Background</h2>
+
+    <div class="about-grid">
+      <p class="about-text">
+        Results-driven AI &amp; Machine Learning Developer specializing in computer vision, NLP, and intelligent agent architectures.
+        Proven ability to build end-to-end ML pipelines — from deploying cloud-based RAG ecosystems to engineering real-time,
+        quantized edge-computing systems. Actively seeking an internship opportunity to apply advanced AI problem-solving skills,
+        contribute to production-grade architectures, and accelerate professional growth within a fast-paced tech environment.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2026</p>
+            <h4>Secondary School Certificate (SSC)</h4>
+            <p>Completed formal secondary examinations, shifting immediate focus toward applied computer science and software engineering.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">Ongoing</p>
+            <h4>Machine Learning Foundations</h4>
+            <p>Independent study — rigorous, self-directed coursework in differential calculus, linear algebra, and statistics, tailored specifically for AI applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-contact" id="contact">
+  <div class="section-inner">
+    <p class="section-eyebrow">04 — contact</p>
+    <h2 class="section-title">Let's build something.</h2>
+    <p class="contact-desc">Open to internship opportunities in AI &amp; ML engineering. Reach out directly — I read everything myself.</p>
+
+    <div class="contact-grid">
+      <a href="mailto:srestho1298@gmail.com" class="contact-card">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">srestho1298@gmail.com</span>
+      </a>
+      <a href="tel:+8801711222950" class="contact-card">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+880 1711-222950</span>
+      </a>
+      <a href="https://github.com/Srestho0101" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">Srestho0101 ↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/Moon_Knight1298" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">@Moon_Knight1298 ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 Muntah Mahfuz Srestho. Mohammadpur, Dhaka, Bangladesh.</p>
+    <p class="footer-built">Built &amp; deployed from <a href="https://github.com/Srestho0101" target="_blank" rel="noopener">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
