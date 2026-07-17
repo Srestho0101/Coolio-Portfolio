@@ -1,2 +1,2 @@
-# My portfolio site!
+# My portfolio site
 Live at: srestho.online 
