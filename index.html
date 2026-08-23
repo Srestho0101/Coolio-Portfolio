@@ -550,6 +550,97 @@
       transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    /* ── Education ── */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .education-card {
+      background: var(--bg);
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .education-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-dim);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .education-card:hover::before {
+      opacity: 1;
+    }
+
+    .education-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .education-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .education-status {
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .education-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    .education-institution {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .education-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .subject-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .subject-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.3rem 0.65rem;
+      border: 1px solid var(--accent-mid);
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+    }
+
     /* ── About ── */
     .about-layout {
       display: grid;
@@ -716,6 +807,10 @@
         gap: 2.5rem;
       }
 
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
       .about-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -818,6 +913,7 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
       <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+      <li><a href="#education" onclick="closeMenu()">Education</a></li>
       <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
@@ -1036,6 +1132,44 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Education -->
+  <section id="education">
+    <p class="section-eyebrow reveal">Academic path</p>
+    <h2 class="section-heading reveal reveal-delay-1">Learning with <em>intent</em></h2>
+    <div class="education-grid">
+      <article class="education-card reveal">
+        <div class="education-meta">
+          <span>2026</span>
+          <span class="education-status">Completed</span>
+        </div>
+        <h3 class="education-title">Secondary School Certificate (SSC)</h3>
+        <p class="education-institution">Secondary education</p>
+        <p class="education-desc">
+          Completed the SSC examination in 2026, building the academic foundation for a deeper focus on mathematics, physics, and machine learning.
+        </p>
+      </article>
+
+      <article class="education-card reveal reveal-delay-1">
+        <div class="education-meta">
+          <span>Current</span>
+          <span class="education-status">In progress</span>
+        </div>
+        <h3 class="education-title">Pearson Edexcel A levels</h3>
+        <p class="education-institution">Private candidate</p>
+        <p class="education-desc">
+          Currently studying independently through Pearson Edexcel as a private candidate, with a subject combination designed to strengthen analytical and quantitative thinking.
+        </p>
+        <div class="subject-list" aria-label="A level subjects">
+          <span class="subject-tag">Physics</span>
+          <span class="subject-tag">Mathematics</span>
+          <span class="subject-tag">Further Mathematics</span>
+        </div>
+      </article>
     </div>
   </section>
 
