@@ -226,10 +226,34 @@
       font-size: clamp(1rem, 2.5vw, 1.4rem);
       font-weight: 400;
       color: var(--text-dim);
-      margin-bottom: 2rem;
+      margin-bottom: 0.8rem;
       max-width: 580px;
       opacity: 0;
       animation: fadeUp 0.7s 0.6s forwards;
+    }
+
+    .hero-currently {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      line-height: 1.6;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.72s forwards;
+    }
+
+    .hero-currently-label {
+      color: var(--accent);
+    }
+
+    .hero-currently-separator {
+      color: var(--accent-mid);
     }
 
     .hero-desc {
@@ -239,7 +263,7 @@
       line-height: 1.75;
       margin-bottom: 3rem;
       opacity: 0;
-      animation: fadeUp 0.7s 0.75s forwards;
+      animation: fadeUp 0.7s 0.88s forwards;
     }
 
     .hero-actions {
@@ -247,7 +271,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       opacity: 0;
-      animation: fadeUp 0.7s 0.9s forwards;
+      animation: fadeUp 0.7s 1.02s forwards;
     }
 
     .btn-primary {
@@ -1041,8 +1065,14 @@
       <span class="name-first">Muntah Mahfuz</span>
       <span class="name-last glitch-wrapper" data-text="Srestho">Srestho</span>
     </h1>
-    <p class="hero-title">AI & Machine Learning Developer</p>
-    <p class="hero-desc">
+      <p class="hero-title">AI & Machine Learning Developer</p>
+      <p class="hero-currently">
+        <span class="hero-currently-label">Currently</span>
+        studying Pearson Edexcel A levels
+        <span class="hero-currently-separator">·</span>
+        Open to AI/ML internships
+      </p>
+      <p class="hero-desc">
       I build systems that see, understand, and act — from edge-computing drone pipelines
       to cloud-scale RAG architectures. Self-taught, production-focused, and always at the
       intersection of research and real-world constraints.
@@ -1051,6 +1081,10 @@
       <a href="#projects" class="btn-primary">
         View projects
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <a href="resume.pdf" download="Muntah_Mahfuz_Srestho_Resume.pdf" class="btn-outline">
+        Download resume
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
       </a>
       <a href="mailto:srestho1298@gmail.com" class="btn-outline">
         Get in touch
