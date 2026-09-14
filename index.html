@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muntah Mahfuz Srestho — AI & ML Developer</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="description" content="AI & Machine Learning Developer specializing in computer vision, NLP, and intelligent agent architectures. Based in Dhaka, Bangladesh." />
+  <meta name="description" content="AI & Machine Learning Developer — tool-calling agents, edge computer vision, and full-stack systems. FastAPI, YOLOv8, Mistral. Based in Dhaka, Bangladesh." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -1214,9 +1214,7 @@
         Open to AI/ML internships
       </p>
       <p class="hero-desc">
-      I build systems that see, understand, and act — from edge-computing drone pipelines
-      to cloud-scale RAG architectures. Self-taught, production-focused, and always at the
-      intersection of research and real-world constraints.
+      I build practical AI systems — agents that call tools, computer vision pipelines that run on limited hardware, and full-stack apps that actually get used. Most of my work sits at the intersection of models and real systems: FastAPI backends, edge inference, and agents that stay grounded in data instead of making things up.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">
@@ -1251,7 +1249,31 @@
     </div>
     <div class="projects-grid">
 
-      <a class="project-card reveal" href="https://github.com/Srestho0101/result-management-system" target="_blank" rel="noopener">
+      <a class="project-card reveal" href="https://github.com/Srestho0101/Pixagent" target="_blank" rel="noopener">
+        <div class="project-status">
+          <span class="status-dot active"></span>
+          Active
+        </div>
+        <div class="project-title">
+          Pixagent
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc">
+          Full-stack AI agent for a laptop repair shop. Technicians create tickets and logs;
+          customers chat with an assistant that answers only from real repair data via Mistral
+          tool calling. Streaming responses, JWT auth, and deliberate guardrails against hallucination.
+        </p>
+        <div class="project-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Mistral AI</span>
+          <span class="tag">Tool Calling</span>
+          <span class="tag">JWT</span>
+        </div>
+      </a>
+
+      <a class="project-card reveal reveal-delay-1" href="https://github.com/Srestho0101/result-management-system" target="_blank" rel="noopener">
         <div class="project-status">
           <span class="status-dot active"></span>
           Contributor
@@ -1261,10 +1283,9 @@
           <span class="project-arrow">↗</span>
         </div>
         <p class="project-desc">
-          A role-aware Flask platform for managing school results, students, attendance,
-          curriculum, and marks. I contributed the agentic-AI layer: a Mistral-powered
-          assistant that lets teachers query scoped student data conversationally through
-          secure, purpose-built tools.
+          Added a Mistral-powered assistant to a Flask school management platform so teachers
+          can query student data in natural language. Built secure tool-calling functions over
+          SQLAlchemy/SQLite that respect role-based access instead of exposing the whole database.
         </p>
         <div class="project-tags">
           <span class="tag">Flask</span>
@@ -1276,7 +1297,7 @@
         </div>
       </a>
 
-      <a class="project-card reveal reveal-delay-1" href="https://github.com/Srestho0101/AI-computer-use" target="_blank" rel="noopener">
+      <a class="project-card reveal reveal-delay-2" href="https://github.com/Srestho0101/AI-computer-use" target="_blank" rel="noopener">
         <div class="project-status">
           <span class="status-dot active"></span>
           Active
@@ -1286,16 +1307,16 @@
           <span class="project-arrow">↗</span>
         </div>
         <p class="project-desc">
-          A multimodal AI agent that operates a Linux desktop autonomously — optimized for
-          low-spec hardware within 4GB RAM. Uses zero-disk RAM frame captures and
-          kernel-level scancode injection for Wayland navigation.
+          Multimodal agent that can control a Linux desktop (Wayland) on machines with only 4GB RAM.
+          Uses in-memory frame capture and kernel-level scancode injection so it can see the screen
+          and type/click without heavy dependencies.
         </p>
         <div class="project-tags">
           <span class="tag">Python</span>
-          <span class="tag">Mistral AI</span>
           <span class="tag">Wayland</span>
           <span class="tag">Linux</span>
           <span class="tag">Computer Vision</span>
+          <span class="tag">Edge</span>
         </div>
       </a>
 
@@ -1309,9 +1330,9 @@
           <span class="project-arrow">↗</span>
         </div>
         <p class="project-desc">
-          End-to-end edge-computing pipeline streaming live drone video to an Arch Linux
-          server for real-time inference. Fine-tuned YOLOv8n with dynamic quantization
-          for aggressive speed-accuracy tradeoffs in drone environments.
+          Live drone video streamed to an Arch Linux server for real-time object detection with
+          YOLOv8 and PyTorch. Fine-tuned YOLOv8n and applied dynamic quantization to keep inference
+          fast enough for moving drones.
         </p>
         <div class="project-tags">
           <span class="tag">YOLOv8</span>
@@ -1346,79 +1367,79 @@
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">FastAPI</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">Flask</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
             <span class="skill-name">PyTorch</span>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">TensorFlow</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-          </div>
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">FastAPI</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
         </div>
       </div>
       <div>
-        <p class="skill-group-label reveal">AI / Data</p>
+        <p class="skill-group-label reveal">AI / ML</p>
         <div class="skill-list">
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">HuggingFace</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
-          </div>
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">ChromaDB</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
-          </div>
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">NumPy / Pandas</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Mistral AI</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="86"></div></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p class="skill-group-label reveal">Tools & Deployment</p>
-        <div class="skill-list">
-          <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Git / GitHub</span>
+            <span class="skill-name">Tool-calling agents</span>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Docker</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+            <span class="skill-name">Mistral API</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="86"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Linux / Arch</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            <span class="skill-name">YOLOv8 / CV</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Render / Cloud</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            <span class="skill-name">Model quantization</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
         </div>
       </div>
       <div>
-        <p class="skill-group-label reveal">Domains</p>
+        <p class="skill-group-label reveal">Backend & Data</p>
         <div class="skill-list">
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Computer Vision</span>
+            <span class="skill-name">PostgreSQL / Supabase</span>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">NLP / RAG</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            <span class="skill-name">SQLAlchemy / SQLite</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="84"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">Edge AI</span>
+            <span class="skill-name">JWT auth / SSE</span>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
           </div>
           <div class="skill-item reveal reveal-delay-1">
-            <span class="skill-name">MLOps</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="68"></div></div>
+            <span class="skill-name">Streaming responses</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label reveal">Systems</p>
+        <div class="skill-list">
+          <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">Linux (Arch)</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">Wayland / Edge</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="84"></div></div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">Git / Docker</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="86"></div></div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
+            <span class="skill-name">Real-time inference</span>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
           </div>
         </div>
       </div>
@@ -1432,38 +1453,17 @@
     <p class="section-eyebrow reveal">Academic background</p>
     <h2 class="section-heading reveal reveal-delay-1">The path so <em>far</em></h2>
     <div class="education-timeline" aria-label="Education history">
-      <article class="education-entry reveal">
-        <div class="education-marker" aria-hidden="true"></div>
-        <div class="education-panel">
-          <div class="education-meta">
-            <span class="education-year">2026</span>
-            <span class="education-status">Completed</span>
-          </div>
-          <h3 class="education-title">Secondary School Certificate (SSC)</h3>
-          <p class="education-institution">Secondary education</p>
-          <p class="education-desc">
-            Completed the SSC examination in 2026, building the academic foundation for a deeper focus on mathematics, physics, and machine learning.
-          </p>
-        </div>
-      </article>
-
-      <div class="timeline-continuation" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <article class="education-entry current reveal reveal-delay-1">
+      <article class="education-entry current reveal">
         <div class="education-marker" aria-hidden="true"></div>
         <div class="education-panel">
           <div class="education-meta">
             <span class="education-year">Current</span>
             <span class="education-status">In progress</span>
           </div>
-          <h3 class="education-title">Pearson Edexcel A levels</h3>
-          <p class="education-institution">Private candidate</p>
+          <h3 class="education-title">Pearson Edexcel A Levels</h3>
+          <p class="education-institution">Private Candidate</p>
           <p class="education-desc">
-            Currently studying independently through Pearson Edexcel as a private candidate, with a subject combination designed to strengthen analytical and quantitative thinking.
+            Studying Physics, Mathematics, and Further Mathematics independently as a private candidate.
           </p>
           <div class="subject-list" aria-label="A level subjects">
             <span class="subject-tag">Physics</span>
@@ -1472,12 +1472,6 @@
           </div>
         </div>
       </article>
-
-      <div class="timeline-continuation" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </section>
 
@@ -1524,7 +1518,7 @@
         </div>
         <div class="info-block">
           <p class="info-block-label">LinkedIn</p>
-          <p class="info-block-value"><a href="https://linkedin.com/in/Moon_Knight1298" target="_blank" rel="noopener">@Moon_Knight1298</a></p>
+          <p class="info-block-value"><a href="https://www.linkedin.com/in/srestho" target="_blank" rel="noopener">linkedin.com/in/srestho</a></p>
         </div>
         <div class="info-block">
           <p class="info-block-label">Status</p>
@@ -1553,7 +1547,7 @@
         GitHub
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
       </a>
-      <a href="https://linkedin.com/in/Moon_Knight1298" target="_blank" rel="noopener" class="btn-outline">
+      <a href="https://www.linkedin.com/in/srestho" target="_blank" rel="noopener" class="btn-outline">
         LinkedIn
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
