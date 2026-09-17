@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f0c29" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Happy Birthday, Himani Auntie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #0f0c29;
+      --bg-mid: #302b63;
+      --bg-soft: #24243e;
+      --gold: #f0e6d2;
+      --gold-soft: #e8d9b5;
+      --accent: #c9a86c;
+      --glow: rgba(240, 230, 210, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg-deep);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--gold);
+      touch-action: manipulation;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(165deg, #0f0c29 0%, #1a163a 40%, #2a2450 100%);
+      position: relative;
+    }
+
+    /* Subtle grain overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .scene {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 420px;
+      padding: 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.8rem;
+    }
+
+    /* Lanterns container */
+    .lanterns {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .lantern {
+      position: absolute;
+      width: 28px;
+      height: 40px;
+      opacity: 0;
+      animation: rise linear infinite;
+    }
+
+    .lantern::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 10px;
+      background: linear-gradient(to bottom, #f5e6c8, #d4b87a);
+      border-radius: 4px 4px 0 0;
+      box-shadow: 0 0 12px rgba(245, 230, 200, 0.5);
+    }
+
+    .lantern::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 26px;
+      background: linear-gradient(135deg, rgba(255, 240, 200, 0.9), rgba(220, 180, 100, 0.7));
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 0 20px rgba(255, 220, 150, 0.4);
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(100vh) scale(0.6);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.85;
+      }
+      90% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-120px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Main card */
+    .card {
+      background: rgba(20, 16, 45, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(240, 230, 210, 0.12);
+      border-radius: 24px;
+      padding: 2.4rem 1.8rem 2.2rem;
+      box-shadow: 
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px) scale(0.97);
+      animation: cardIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 20%, rgba(240, 230, 210, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    @keyframes cardIn {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 400;
+      margin-bottom: 1.1rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.9s forwards;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.4rem, 9vw, 3.1rem);
+      line-height: 1.15;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.05s forwards;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.55rem, 6vw, 1.9rem);
+      color: var(--gold-soft);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.6rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.2s forwards;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 0 auto 1.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.35s forwards;
+    }
+
+    .message {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      font-weight: 300;
+      color: rgba(240, 230, 210, 0.88);
+      max-width: 300px;
+      margin: 0 auto 1.8rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.5s forwards;
+    }
+
+    .from {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: rgba(201, 168, 108, 0.7);
+      font-weight: 400;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.7s forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Interaction hint */
+    .hint {
+      margin-top: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: rgba(240, 230, 210, 0.45);
+      opacity: 0;
+      animation: fadeUp 1s ease 2.2s forwards;
+      transition: opacity 0.4s ease;
+    }
+
+    .hint.hidden {
+      opacity: 0;
+    }
+
+    /* Soft glow button */
+    .wish-btn {
+      margin-top: 0.3rem;
+      background: transparent;
+      border: 1px solid rgba(201, 168, 108, 0.35);
+      color: var(--gold-soft);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.9s forwards;
+      transition: all 0.35s ease;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .wish-btn:active {
+      transform: scale(0.96);
+      background: rgba(201, 168, 108, 0.12);
+    }
+
+    .wish-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(240, 230, 210, 0.15), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .wish-btn:hover::after,
+    .wish-btn:active::after {
+      opacity: 1;
+    }
+
+    /* Floating soft particles on interaction */
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 20;
+      box-shadow: 0 0 8px var(--glow);
+    }
+
+    /* Responsive tweaks */
+    @media (max-height: 700px) {
+      .card {
+        padding: 1.8rem 1.5rem 1.7rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .message {
+        font-size: 0.9rem;
+        margin-bottom: 1.3rem;
+      }
+    }
+
+    @media (min-width: 480px) {
+      .scene {
+        max-width: 440px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="lanterns" id="lanterns"></div>
+
+  <div class="scene">
+    <div class="card">
+      <div class="eyebrow">A quiet wish for you</div>
+      <h1>Happy Birthday</h1>
+      <div class="name">Himani Auntie</div>
+      <div class="divider"></div>
+      <p class="message">
+        May this journey around the sun be peaceful and the next days comes up with your wishes.
+      </p>
+      <div class="from">From the Stars</div>
+    </div>
+
+    <button class="wish-btn" id="wishBtn">Release a lantern</button>
+    <div class="hint" id="hint">tap the button or anywhere on the sky</div>
+  </div>
+
+  <script>
+    // ========== Canvas stars & soft particles ==========
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let stars = [];
+    let particles = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      createStars();
+    }
+
+    function createStars() {
+      stars = [];
+      const count = Math.floor((width * height) / 9000);
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 1.4 + 0.3,
+          alpha: Math.random() * 0.6 + 0.2,
+          twinkle: Math.random() * 0.02 + 0.005
+        });
+      }
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, width, height);
+      stars.forEach(s => {
+        s.alpha += s.twinkle;
+        if (s.alpha > 0.9 || s.alpha < 0.15) s.twinkle *= -1;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(240, 230, 210, ${s.alpha})`;
+        ctx.fill();
+      });
+    }
+
+    function createParticle(x, y) {
+      for (let i = 0; i < 12; i++) {
+        particles.push({
+          x,
+          y,
+          vx: (Math.random() - 0.5) * 3.5,
+          vy: (Math.random() - 0.5) * 3.5 - 1,
+          life: 1,
+          decay: Math.random() * 0.02 + 0.012,
+          size: Math.random() * 2.5 + 1
+        });
+      }
+    }
+
+    function updateParticles() {
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.03;
+        p.life -= p.decay;
+        if (p.life <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(240, 230, 210, ${p.life * 0.8})`;
+        ctx.fill();
+      }
+    }
+
+    function animate() {
+      drawStars();
+      updateParticles();
+      requestAnimationFrame(animate);
+    }
+
+    // ========== Floating lanterns ==========
+    const lanternsEl = document.getElementById('lanterns');
+
+    function spawnLantern() {
+      const lan = document.createElement('div');
+      lan.className = 'lantern';
+      const left = Math.random() * 90 + 5;
+      const duration = Math.random() * 8 + 11;
+      const delay = Math.random() * 2;
+      lan.style.left = left + '%';
+      lan.style.animationDuration = duration + 's';
+      lan.style.animationDelay = delay + 's';
+      lanternsEl.appendChild(lan);
+
+      setTimeout(() => lan.remove(), (duration + delay) * 1000 + 500);
+    }
+
+    // Spawn a few lanterns on load
+    for (let i = 0; i < 4; i++) {
+      setTimeout(spawnLantern, i * 1800);
+    }
+
+    // Continuous gentle lanterns
+    setInterval(() => {
+      if (document.visibilityState === 'visible') spawnLantern();
+    }, 4200);
+
+    // ========== Interaction ==========
+    const wishBtn = document.getElementById('wishBtn');
+    const hint = document.getElementById('hint');
+
+    function releaseWish(x, y) {
+      createParticle(x, y);
+      spawnLantern();
+      // subtle haptic if available
+      if (navigator.vibrate) navigator.vibrate(12);
+    }
+
+    wishBtn.addEventListener('click', (e) => {
+      const rect = wishBtn.getBoundingClientRect();
+      releaseWish(rect.left + rect.width / 2, rect.top + rect.height / 2);
+      hint.classList.add('hidden');
+    });
+
+    // Tap anywhere on sky
+    document.body.addEventListener('click', (e) => {
+      if (e.target.closest('.card') || e.target.closest('.wish-btn')) return;
+      releaseWish(e.clientX, e.clientY);
+      hint.classList.add('hidden');
+    });
+
+    // Touch support
+    document.body.addEventListener('touchstart', (e) => {
+      if (e.target.closest('.card') || e.target.closest('.wish-btn')) return;
+      const t = e.touches[0];
+      releaseWish(t.clientX, t.clientY);
+      hint.classList.add('hidden');
+    }, { passive: true });
+
+    // Init
+    window.addEventListener('resize', resize);
+    resize();
+    animate();
+  </script>
+</body>
+</html>
