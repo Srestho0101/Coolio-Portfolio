@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Newsreader", "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --font-body: "Literata", "Iowan Old Style", Georgia, serif;
+  --color-paper: #f4efe4;
+  --color-ink: #1e1a16;
+  --color-muted: #4f493f;
+  --color-faint: #5c564c;
+  --color-line: #e0d6c8;
+  --color-margin: #b4332a;
+  --color-link: #8f2d22;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-margin) 28%, white);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-margin);
+    outline-offset: 3px;
+  }
+}
